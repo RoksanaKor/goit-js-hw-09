@@ -37,5 +37,9 @@ function onClick(promiseAmount, promiseDelay, promiseStep) {
 
 createBtn.addEventListener('click', event => {
   event.preventDefault();
+  if (delay.value === '' || step.value === '' || amount.value === '') {
+    Notiflix.Notify.warning('Fill all the fields!');
+    return;
+  }
   onClick(parseInt(amount.value), parseInt(delay.value), parseInt(step.value));
 });
