@@ -97,6 +97,7 @@ function onClick() {
   }
   onStart();
   input.disabled = 'true';
+  startButton.disabled = 'true';
 }
 
 startButton.addEventListener('click', onClick);
